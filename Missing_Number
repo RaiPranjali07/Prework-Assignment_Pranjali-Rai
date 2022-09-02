@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class Missing_Number {
+	
+ public static void main(String[] args) {
+	 
+ Scanner in = new Scanner(System.in);
+ System.out.println("Please enter size");
+ int size = in .nextInt();
+ System.out.println("Please enter elements");
+ int[] arr = new int[size - 1];
+ for (int i = 0; i < size - 1; i++) arr[i] = in .nextInt();
+ System.out.println(missingNumberFinder(arr, size));
+ }
+ static int missingNumberFinder(int array[], int n) {
+	 int i, num=1;
+       for( i=0; i < n-1; i++)
+       {
+    	
+    	   if(array[i] == num)
+    	   {
+    		   num++;
+    	   }
+    /*	   else
+    	   {
+    		   break;
+    	   }*/
+    	 
+       }
+return num;
+ }
+}
